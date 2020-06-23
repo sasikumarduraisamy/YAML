@@ -23,14 +23,3 @@ spec:
       volumes:
         - name: jenkins-home
           emptyDir: {}
-kind: Service
-metadata:
-  name: jenkins
-spec:
-  type: NodePort
-  ports:
-    - port: 8585
-      targetPort: 8585
-      nodePort: 44000
-  selector:
-    app: jenkins
